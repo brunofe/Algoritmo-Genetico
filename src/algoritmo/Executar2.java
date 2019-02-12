@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import core.Produto;
 
-public class Executar {
+public class Executar2 {
 	public static void main(String Args[]) {
 		//Produto p1 = new Produto("Geladeira Daku", 0.751, 999.90);
 		List<Produto> listaProdutos = new ArrayList<>();
