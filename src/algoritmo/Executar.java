@@ -25,5 +25,6 @@ public class Executar {
 		for(Produto produto: listaProdutos) {
 			System.out.println(produto.getNome());
 		}
+		//test
 	}
 }
