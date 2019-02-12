@@ -21,8 +21,7 @@ public class Executar {
 		listaProdutos.add(new Produto("Geladeira Brastemp", 0.635, 849.00));
 		listaProdutos.add(new Produto("Geladeira Consul", 0.870, 1199.89));
 		listaProdutos.add(new Produto("Notebook Lenovo", 0.498, 1999.90));
-		listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));
-		
+		listaProdutos.add(new Produto("Notebook Asus", 0.527, 3999.00));		
 		for(Produto produto: listaProdutos) {
 			System.out.println(produto.getNome());
 		}
