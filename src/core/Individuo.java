@@ -48,6 +48,8 @@ public class Individuo {
 		this.espacoUsado = somaEspacos;
 	}
 	
+	
+	
 	public Double getEspacoUsado() {
 		return espacoUsado;
 	}
