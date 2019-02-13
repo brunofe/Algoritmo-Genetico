@@ -6,7 +6,7 @@ import java.util.List;
 import core.Individuo;
 import core.Produto;
 
-public class Executar2 {
+public class Executar3 {
 	public static void main(String Args[]) {
 		//Produto p1 = new Produto("Geladeira Daku", 0.751, 999.90);
 		List<Produto> listaProdutos = new ArrayList<>();
@@ -36,13 +36,8 @@ public class Executar2 {
 		Double limite = 3.0;
 		
 		Individuo individuo1 = new Individuo(espacos, valores, limite);
-		System.out.println("Epaços: " + individuo1.getEspacos());
-		System.out.println("Valores: " + individuo1.getValores());
-		System.out.println("Cromossomo: " + individuo1.getCromossomo());
-		for(int i=0; i< listaProdutos.size(); i++) {
-			if(individuo1.getCromossomo().get(i)=="1") {
-				System.out.println("Nome: " + listaProdutos.get(i).getNome() + " R$: " + listaProdutos.get(i).getValor());
-			}	
-		}
+		individuo1.avaliacao();
+		System.out.println("Nota: " + individuo1.getNotaAvaliacao());
+		System.out.println("Espaço usado: " + individuo1.getEspacoUsado());
 	}
 }

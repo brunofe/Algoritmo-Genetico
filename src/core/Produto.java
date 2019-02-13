@@ -2,13 +2,13 @@ package core;
 
 public class Produto {
 	private String nome;
-	private double espaço;
+	private double espaco;
 	private double valor;
 	
 	public Produto(String nome, double espaço, double valor) {
 		super();
 		this.nome = nome;
-		this.espaço = espaço;
+		this.espaco = espaço;
 		this.valor = valor;
 	}
 
@@ -20,12 +20,12 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public double getEspaço() {
-		return espaço;
+	public double getEspaco() {
+		return espaco;
 	}
 
-	public void setEspaço(double espaço) {
-		this.espaço = espaço;
+	public void setEspaco(double espaco) {
+		this.espaco = espaco;
 	}
 
 	public double getValor() {
