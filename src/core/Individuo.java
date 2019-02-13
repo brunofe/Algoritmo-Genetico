@@ -53,6 +53,21 @@ public class Individuo {
 		List filho1 = new ArrayList<>();
 		filho1.addAll(outroIndividuo.getCromossomo().subList(0, corte));
 		filho1.addAll(this.cromossomo.subList(corte, this.cromossomo.size()));
+		
+		List filho2 = new ArrayList<>();
+		filho2.addAll(this.cromossomo.subList(0, corte));
+		filho2.addAll(outroIndividuo.getCromossomo().subList(corte, this.cromossomo.size()));
+		
+		List<Individuo> filhos = new ArrayList<>();
+		filhos.add(new Individuo(this.espacos, this.valores, this.limiteEspacos));
+		filhos.add(new Individuo(this.espacos, this.valores, this.limiteEspacos));
+		
+		filhos.get(0).setCromossomo(filho1);
+		filhos.get(0).setGeracao(this.geracao + 1);
+		filhos.get(1).setCromossomo(filho2);
+		filhos.get(1).setGeracao(this.geracao + 1);
+		
+		return filhos;
 	}
 	
 	public Double getEspacoUsado() {

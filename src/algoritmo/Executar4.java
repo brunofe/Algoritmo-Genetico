@@ -46,5 +46,7 @@ public class Executar4 {
 		individuo2.avaliacao();
 		System.out.println("Nota: " + individuo2.getNotaAvaliacao());
 		System.out.println("Espaço usado: " + individuo2.getEspacoUsado());
+		
+		individuo1.crossover(individuo2);
 	}
 }
