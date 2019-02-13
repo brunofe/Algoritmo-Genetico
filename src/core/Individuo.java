@@ -48,7 +48,12 @@ public class Individuo {
 		this.espacoUsado = somaEspacos;
 	}
 	
-	
+	public List crossover(Individuo outroIndividuo) {
+		int corte = (int) Math.round(Math.random() * this.cromossomo.size());
+		List filho1 = new ArrayList<>();
+		filho1.addAll(outroIndividuo.getCromossomo().subList(0, corte));
+		filho1.addAll(this.cromossomo.subList(corte, this.cromossomo.size()));
+	}
 	
 	public Double getEspacoUsado() {
 		return espacoUsado;
