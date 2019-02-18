@@ -2,7 +2,6 @@ package algoritmo;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import core.AlgoritmoGenetico;
 import core.Individuo;
 import core.Produto;

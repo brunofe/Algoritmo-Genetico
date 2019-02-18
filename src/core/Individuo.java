@@ -26,8 +26,6 @@ public class Individuo implements Comparable<Individuo> {
 				this.cromossomo.add("1");
 			}
 		}
-		
-		
 	}
 	
 	public void avaliacao() {
@@ -43,7 +41,6 @@ public class Individuo implements Comparable<Individuo> {
 		if(somaEspacos > this.limiteEspacos) {
 			nota = 1.0;
 		}
-		
 		this.notaAvaliacao = nota;
 		this.espacoUsado = somaEspacos;
 	}
