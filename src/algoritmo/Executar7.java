@@ -7,7 +7,7 @@ import core.AlgoritmoGenetico;
 import core.Individuo;
 import core.Produto;
 
-public class Executar6 {
+public class Executar7 {
 	public static void main(String Args[]) {
 		List<Produto> listaProdutos = new ArrayList<>();
 		
@@ -34,14 +34,22 @@ public class Executar6 {
 			nomes.add(produto.getNome());
 		}
 		Double limite = 3.0;
+		
 		int tamanhoPopulacao = 20;
 		AlgoritmoGenetico ag = new AlgoritmoGenetico(tamanhoPopulacao);
 		ag.inicializaPopulacao(espacos, valores, limite);
+		for(Individuo individuo: ag.getPopulacao()) {
+			individuo.avaliacao();
+		}
+		
+		ag.ordenaPopulacao();
+		
 		for(int i = 0; i < ag.getTamanhoPopulacao(); i++) {
 			System.out.println("*** Individuo " + i + "****\n Espaços = " +
 								ag.getPopulacao().get(i).getEspacos() +
 								"\nValores = " + ag.getPopulacao().get(i).getValores()+
-								"\nCromossomo = " + ag.getPopulacao().get(i).getCromossomo());
+								"\nCromossomo = " + ag.getPopulacao().get(i).getCromossomo() +
+								"\nNota = " + ag.getPopulacao().get(i).getNotaAvaliacao());
 		}
 	}
 }

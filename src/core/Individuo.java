@@ -3,7 +3,7 @@ package core;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Individuo {
+public class Individuo implements Comparable<Individuo> {
 	private List espacos = new ArrayList<>();
 	private List valores = new ArrayList<>();
 	private Double limiteEspacos;
@@ -12,8 +12,8 @@ public class Individuo {
 	private int geracao;
 	private List cromossomo = new ArrayList<>();
 	
-	public Individuo(List espacos, List valores, Double limiteEspacos) {
-		this.espacos =espacos;
+	public Individuo(List espacos, List valores, Double limiteEspacos){
+		this.espacos = espacos;
 		this.valores = valores;
 		this.limiteEspacos = limiteEspacos;
 		this.notaAvaliacao = 0.0;
@@ -139,5 +139,16 @@ public class Individuo {
 
 	public void setCromossomo(List cromossomo) {
 		this.cromossomo = cromossomo;
+	}
+
+	@Override
+	public int compareTo(Individuo o) {
+		if(this.notaAvaliacao > o.getNotaAvaliacao()) {
+			return -1;
+		}
+		if(this.notaAvaliacao < o.getNotaAvaliacao()) {
+			return 1;
+		}
+		return 0;
 	}
 }
