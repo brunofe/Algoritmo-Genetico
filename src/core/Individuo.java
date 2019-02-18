@@ -70,6 +70,21 @@ public class Individuo {
 		return filhos;
 	}
 	
+	public Individuo mutacao(Double taxaMutacao) {
+		System.out.println("Antes da mutação:  " + this.cromossomo);
+		for(int i=0; i<this.cromossomo.size(); i++) {
+			if(Math.random() < taxaMutacao) {
+				if (this.cromossomo.get(i).equals(("1"))){
+					this.cromossomo.set(i, "0");
+				} else {
+					this.cromossomo.set(i, "1");
+				}
+			}
+		}
+		System.out.println("Depois da mutação: " + this.cromossomo);
+		return this;
+	}
+	
 	public Double getEspacoUsado() {
 		return espacoUsado;
 	}
